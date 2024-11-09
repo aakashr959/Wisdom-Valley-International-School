@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wisdom Vallley</title>
+  <link rel="stylesheet" href="firstPageStyle.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class = "top-nav ">
+      <div class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnRrsLhMrHIpxtB0ABl2hJVRxHV_8n1r2nPw&s" alt="School Logo"> Wisdom Valley</div>
+      <ul class="nav-links">
+        <li><a href="firstPage.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="fees.html">Pay Fees</a></li>
+        <li><a href="appointment.html">Take Appointment</a></li>
+      </ul>
+      <div class="navbar-search">
+        <input type="text" placeholder="Search...">
+        <button onclick="searchFunction()">🔍</button>
+    </div>
+      
+    
+    </nav>
+
+    
+    <nav class="bottom-nav">
+      <div class="navbar-container">
+          <ul class="navbar-menu">
+              <li><a href="#">Student <span class="underline"></span></a></span></li>
+              <li><a href="#">Family <span class="underline"></span></a></li>
+              <li><a href="#">Faculty and Staff <span class="underline"></span></a></li>
+              <li><a href="#">Alumni <span class="underline"></span></a></li>
+              <li><a href="#">Visitors <span class="underline"></span></a></li>
+          </ul>
+          
+      </div>
+  </nav>
+
+  </header>
+
+  <div class="messages">
+    <div class="card-container">
+      <!-- Principal's Message Card -->
+      <div class="card">
+        <img src="Principal_image.jpg"alt="Principal's Photo">
+          <h2>Principal's Message</h2>
+          <p id="principal-message">Welcome to our school! We strive for excellence in education and personal growth.</p>
+          <button onclick="showFullMessage('principal')">Read More</button>
+      </div>
+  
+      <!-- Manager's Message Card -->
+      <div class="card">
+        <img src="Manager_image.jpg" alt="Manager's Photo">
+          <h2>Manager's Message</h2>
+          <p id="manager-message">Our goal is to create a supportive environment where students thrive.</p>
+          <button onclick="showFullMessage('manager')">Read More</button>
+      </div>
+  </div>
+
+
+  </div>
+  
+  <!-- Gallery Section -->
+  <section id="gallery" class="content-section">
+    <h2>Our Campus</h2>
+    <div class="scroll-container">
+      <img src="Cmpus_independence day.jpg" alt="Campus_image">
+      <img src="school image.webp" alt="Campus_image2">
+      <img src="schoolcampus.jpg" alt="Campus_image3">
+      <img src="freshers_party.webp" alt="Freshers_party">
+      <img src="award.jpg" alt="award">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Welcome to Our School</h1>
+      <p>Shaping bright futures, one student at a time.</p>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 School Name. All rights reserved.</p>
+  </footer>
+
+  <script src="firstPage.js"></script>
+</body>
+</html>

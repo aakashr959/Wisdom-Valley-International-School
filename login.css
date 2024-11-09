@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Background Slideshow */
+  .background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  /* Login Container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .login-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Login Box Heading */
+  .login-box h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Box Styling */
+  .input-box {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 1em;
+    color: #fff;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #00cc99;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-box input:focus,
+  .input-box input:valid {
+    border-color: #fff;
+  }
+  
+  .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    color: #fff;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label {
+    top: 0;
+    left: 10px;
+    font-size: 0.8em;
+    color: #00cc99;
+  }
+  
+  /* Login Button Styling */
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00cc99;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #0066cc;
+  }
+  
+  /* Signup Link */
+  .signup-link {
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .signup-link a {
+    color: #00cc99;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link a:hover {
+    color: #0066cc;
+  }
+  
