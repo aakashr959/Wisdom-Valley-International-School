@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Appointment Page</title>
+  <link rel="stylesheet" href="appointmentstyles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Wisdom valley
+
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Admissions</a>
+      <a href="#">Academics</a>
+      <a href="#">Contact Us</a>
+      <a href="#" class="cta">Book an Appointment</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Experience the Excellence in Education</h1>
+      <p>Schedule Your Visit Today!</p>
+      <a href="#appointment-form" class="btn-primary">Book an Appointment Now</a>
+    </div>
+  </section>
+
+  <!-- Appointment Form Section -->
+  <section class="form-section" id="appointment-form">
+    <h2>Book an Appointment</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      
+      <label for="phone">Contact Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your contact number" required>
+      
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+      
+      <label for="time">Preferred Time Slot</label>
+      <select id="time" name="time" required>
+        <option value="" disabled selected>Select a time slot</option>
+        <option value="9am">9:00 AM - 10:00 AM</option>
+        <option value="11am">11:00 AM - 12:00 PM</option>
+        <option value="2pm">2:00 PM - 3:00 PM</option>
+      </select>
+      
+      <label for="purpose">Purpose of Appointment</label>
+      <select id="purpose" name="purpose" required>
+        <option value="" disabled selected>Select purpose</option>
+        <option value="admission">Admission Inquiry</option>
+        <option value="tour">Campus Tour</option>
+        <option value="meeting">Parent-Teacher Meeting</option>
+      </select>
+      
+      <label for="message">Message (Optional)</label>
+      <textarea id="message" name="message" rows="4" placeholder="Any additional details?"></textarea>
+      
+      <button type="submit" class="btn-primary">Submit Request</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact Us: +1-800-555-1234 | email@wisdomvalleyschool.com</p>
+    <div class="socials">
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+    <p>© 2024 wisdom valley School. All rights reserved.</p>
+  </footer>
+</body>
+</html>
