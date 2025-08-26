@@ -1,0 +1,129 @@
+/* contact.css */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --success-color: #43e97b; /* Changed for better contrast */
+    --danger-color: #ff4d4d;  /* Defined for error messages */
+    --info-color: #4facfe;    /* Defined for info messages */
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --light-subtle: #eef2f5; /* Light background for sections */
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero-section {
+   
+     min-height: 50vh; /* Slightly shorter for an about page */
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
+                url('schoolcampus.jpg') center center / cover no-repeat;
+    position: relative;
+    padding-top: 80px; /* Adjust for fixed navbar */
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    animation: float 6s ease-in-out infinite;
+}.navbar {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--dark-color) !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: var(--dark-color) !important;
+    margin: 0 8px;
+    padding: 10px 20px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    color: #0d6efd;
+    margin-right: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 12px;
+}
+
+footer {
+    background: rgba(118, 75, 162, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #084298;
+}
