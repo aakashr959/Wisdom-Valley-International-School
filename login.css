@@ -1,30 +1,42 @@
-/* General Reset */
-* {
+/* Custom CSS Variables - Consistent with other pages */
+:root {
+    --primary-color: #667eea; /* A vibrant blue-purple, used for primary accents */
+    --secondary-color: #764ba2; /* A deeper purple, complementing the primary */
+    --accent-color: #f093fb; /* A bright pink/purple, for call-to-actions like sign-up */
+    --dark-color: #2c3e50; /* A dark slate, for primary text on light backgrounds */
+    --light-color: #f8f9fa; /* A very light grey, for general backgrounds */
+    --text-color-light: #ececec; /* Lighter text for dark backgrounds (like input fields) */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Slightly transparent input background */
+    --input-border: rgba(255, 255, 255, 0.3); /* Transparent border for inputs */
+    --success-color: #43e97b; /* Green for success */
+    --danger-color: #ff4d4d; /* Red for errors */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrollbars during background transitions */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-  }
-  
-  /* Background Slideshow */
-  .background-slideshow {
+    background-color: var(--dark-color); /* Fallback background */
+}
+
+/* Background Slideshow */
+.background-slideshow {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-  }
-  
-  .slide {
+    overflow: hidden;
+    z-index: -1; /* Ensures it stays behind the login box */
+}
+
+.background-slideshow .slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,115 +44,263 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease;
-  }
-  
-  /* Login Container */
-  .login-container {
+    opacity: 0; /* Hidden by default, then animated */
+    animation: imageFade 20s infinite; /* Smooth fading and slight scaling */
+    filter: brightness(0.6) grayscale(0.2); /* Softens images, improves text readability */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Animation delays for each slide - creates the slideshow effect */
+.background-slideshow .slide:nth-child(1) { animation-delay: 0s; }
+.background-slideshow .slide:nth-child(2) { animation-delay: 4s; }
+.background-slideshow .slide:nth-child(3) { animation-delay: 8s; }
+.background-slideshow .slide:nth-child(4) { animation-delay: 12s; }
+.background-slideshow .slide:nth-child(5) { animation-delay: 16s; }
+
+@keyframes imageFade {
+    0% { opacity: 0; transform: scale(1.05); } /* Starts faded out and slightly zoomed */
+    10% { opacity: 1; transform: scale(1); } /* Fades in and settles */
+    25% { opacity: 1; transform: scale(1); } /* Stays visible */
+    30% { opacity: 0; transform: scale(1.05); } /* Fades out and zooms slightly for next slide */
+    100% { opacity: 0; transform: scale(1.05); }
+}
+
+/* Login Container */
+.login-container {
+    position: relative;
+    z-index: 1; /* Ensures it's above the slideshow */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  .login-box {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    gap: 3rem; /* Space between welcome note and login box */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Welcome Note Styling */
+.welcome-note {
+    color: white;
+    text-align: right;
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    transform: translateX(-50px); /* Initial position for animation */
+    opacity: 0; /* Hidden initially */
+    animation: fadeInLeft 1s ease-out forwards; /* Animation */
+    animation-delay: 0.5s; /* Delay after page load */
+    max-width: 450px; /* Limit width */
+}
+
+.welcome-note h1 {
+    font-size: 3.8rem; /* Larger font for the main heading */
+    margin: 0;
+    background: linear-gradient(45deg, #fff, #ffd700); /* Gold highlight */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+.login-box {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect for elegance */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px; /* Rounded corners for a friendly, modern look */
     padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Depth effect */
+    text-align: center;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    text-align: center;
-    animation: fadeIn 1s ease forwards;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Login Box Heading */
-  .login-box h2 {
-    color: #4b26eb;
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  /* Input Box Styling */
-  .input-box {
-    position: relative;
-    margin: 20px 0;
-  }
-  
-  .input-box input {
-    width: 100%;
-    padding: 10px 10px 10px 40px;
-    font-size: 1em;
-    color: #fff;
-    background: none;
-    border: none;
-    border-bottom: 2px solid #4b26eb;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input-box input:focus,
-  .input-box input:valid {
-    border-color: #fff;
-  }
-  
-  .input-box label {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    color: #fff;
-    transform: translateY(-50%);
-    transition: 0.3s ease;
-    pointer-events: none;
-  }
-  
-  .input-box input:focus ~ label,
-  .input-box input:valid ~ label {
-    top: 0;
-    left: 10px;
-    font-size: 0.8em;
-    color: #4b26eb;
-  }
-  
-  /* Login Button Styling */
-  .login-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4b26eb;
+    animation: fadeInUp 0.8s ease-out; /* Smooth entrance animation */
+    animation-delay: 1s; /* Delay after welcome note */
+    opacity: 0; /* Hidden initially */
+    transform: translateY(20px); /* Initial position for animation */
+    animation-fill-mode: forwards; /* Keep final state of animation */
+}
+
+.login-box h2 {
     color: white;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Subtle text shadow for pop */
+}
+
+/* Input Box Styling (Floating Label Effect) */
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 10px 10px;
+    background: transparent; /* Blends with the blurred background */
     border: none;
-    border-radius: 25px;
-    font-size: 1em;
+    border-bottom: 2px solid var(--input-border); /* Underline style */
+    color: var(--text-color-light); /* Light text on dark/blurred background */
+    font-size: 1rem;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.input-box input:focus {
+    border-bottom-color: var(--primary-color); /* Highlight on focus */
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: var(--text-color-light);
+    font-size: 1rem;
+    pointer-events: none; /* Allows clicking through label to input */
+    transition: 0.3s ease; /* Smooth transition for floating label */
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -18px; /* Moves label up */
+    font-size: 0.8rem;
+    color: var(--primary-color); /* Changes label color */
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+    border: none;
+    border-radius: 25px; /* Pill-shaped button */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #0066cc;
-  }
-  
-  /* Signup Link */
-  .signup-link {
-    color: #fff;
-    margin-top: 20px;
-  }
-  
-  .signup-link a {
-    color: #4b26eb;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-button:hover {
+    transform: translateY(-3px) scale(1.01); /* Lift and slightly enlarge on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+/* Signup Link */
+.signup-link {
+    margin-top: 25px;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.signup-link a {
+    color: var(--accent-color); /* Bright accent color */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     transition: color 0.3s ease;
-  }
-  
-  .signup-link a:hover {
-    color: #0066cc;
-  }
-  
+}
+
+.signup-link a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Feedback message */
+#feedbackMessage {
+    color: white;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    min-height: 20px; /* Reserves space to prevent layout shifts */
+    font-weight: 500;
+}
+#feedbackMessage.success {
+    color: var(--success-color); /* Green for success */
+}
+#feedbackMessage.error {
+    color: var(--danger-color); /* Red for errors */
+}
+#feedbackMessage.loading {
+    color: var(--accent-color); /* Use accent for loading */
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 2rem;
+    }
+    .welcome-note {
+        text-align: center;
+        font-size: 2.5rem;
+        transform: translateY(-20px); /* Adjust initial position for top-down animation */
+        animation: fadeInUp 1s ease-out forwards; /* Change animation direction */
+        animation-delay: 0.5s;
+    }
+    .welcome-note h1 {
+        font-size: 3rem;
+    }
+    .login-box {
+        animation-delay: 1s; /* Adjust delay */
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-note {
+        font-size: 2rem;
+    }
+    .welcome-note h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-note {
+        display: none; /* Hide welcome note on very small screens to prioritize login form */
+    }
+    .login-box {
+        padding: 30px 20px;
+        animation-delay: 0s; /* No delay if welcome note is hidden */
+        transform: translateY(0); /* Start from current position if welcome note is hidden */
+        opacity: 1; /* Always visible if welcome note is hidden */
+    }
+    .login-box h2 {
+        font-size: 1.8rem;
+    }
+    .input-box input,
+    .input-box label {
+        font-size: 0.9rem;
+    }
+    .login-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .signup-link, #feedbackMessage {
+        font-size: 0.85rem;
+    }
+}
