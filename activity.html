@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Wisdom Valley School</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "activity.css">
+     </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnRrsLhMrHIpxtB0ABl2hJVRxHV_8n1r2nPw&s" alt="Logo">
+                Wisdom Valley
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up">
+                    <h1 class="hero-title">School Activities</h1>
+                    <p class="hero-subtitle">Discover the vibrant world of learning, competition, and growth at Wisdom Valley</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <button class="btn filter-btn active" data-filter="all">All Activities</button>
+                    <button class="btn filter-btn" data-filter="academic">Academic</button>
+                    <button class="btn filter-btn" data-filter="sports">Sports</button>
+                    <button class="btn filter-btn" data-filter="cultural">Cultural</button>
+                    <button class="btn filter-btn" data-filter="competitions">Competitions</button>
+                    <button class="btn filter-btn" data-filter="meetings">Meetings</button>
+                    <button class="btn filter-btn" data-filter="assembly">Assembly</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4" data-aos="fade-up">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="150">0</span>
+                        <div class="stat-label">Activities This Year</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="45">0</span>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="98">0</span>
+                        <div class="stat-label">Participation Rate %</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="25">0</span>
+                        <div class="stat-label">Inter-School Events</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Grid -->
+    <section class="activities-section">
+        <div class="container">
+            <div class="row g-4" id="activitiesGrid">
+                <!-- Science Fair -->
+                <div class="col-lg-4 col-md-6 activity-item academic" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-card" onclick="showActivityModal('science-fair')">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=250&fit=crop" alt="Science Fair" class="card-image">
+                            <div class="card-overlay academic">
+                                <div class="activity-icon">🔬</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="activity-title">Science Fair</h3>
+                            <p class="activity-subtitle">Annual Innovation Showcase</p>
+                            <p class="activity-description">Students showcase their scientific projects and innovations in this annual event that celebrates creativity and scientific thinking.</p>
+                            <div class="activity-meta">
+                                <div class="meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>3 Days</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-people"></i>
+                                    <span>200+ Participants</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-trophy"></i>
+                                    <span>15 Categories</span>
+                                </div>
+                            </div>
+                            <div class="activity-tags">
+                                <span class="activity-tag">Public Speaking</span>
+                                <span class="activity-tag">Critical Thinking</span>
+                                <span class="activity-tag">Research</span>
+                            </div>
+                            <button class="btn btn-gradient w-100">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parent-Teacher Conference -->
+                <div class="col-lg-4 col-md-6 activity-item meetings" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-card" onclick="showActivityModal('parent-teacher-conference')">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&h=250&fit=crop" alt="Parent Teacher Meeting" class="card-image">
+                            <div class="card-overlay meetings">
+                                <div class="activity-icon">👥</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="activity-title">Parent-Teacher Conference</h3>
+                            <p class="activity-subtitle">Partnership in Education</p>
+                            <p class="activity-description">Regular meetings between parents and teachers to discuss student progress, challenges, and collaborative support strategies.</p>
+                            <div class="activity-meta">
+                                <div class="meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>Full Day</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-people"></i>
+                                    <span>300+ Families</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-calendar3"></i>
+                                    <span>Quarterly</span>
+                                </div>
+                            </div>
+                            <div class="activity-tags">
+                                <span class="activity-tag">Communication</span>
+                                <span class="activity-tag">Partnership</span>
+                                <span class="activity-tag">Progress</span>
+                            </div>
+                            <button class="btn btn-gradient w-100">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Morning Assembly -->
+                <div class="col-lg-4 col-md-6 activity-item assembly" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-card" onclick="showActivityModal('morning-assembly')">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=250&fit=crop" alt="Morning Assembly" class="card-image">
+                            <div class="card-overlay assembly">
+                                <div class="activity-icon">🌅</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="activity-title">Morning Assembly</h3>
+                            <p class="activity-subtitle">Daily Inspiration & Unity</p>
+                            <p class="activity-description">Daily gathering of the school community for prayers, announcements, inspirational talks, and celebrating achievements.</p>
+                            <div class="activity-meta">
+                                <div class="meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>20 Minutes</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-people"></i>
+                                    <span>1200+ Daily</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                    <span>Daily</span>
+                                </div>
+                            </div>
+                            <div class="activity-tags">
+                                <span class="activity-tag">Unity</span>
+                                <span class="activity-tag">Inspiration</span>
+                                <span class="activity-tag">Community</span>
+                            </div>
+                            <button class="btn btn-gradient w-100">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Competition -->
+                <div class="col-lg-4 col-md-6 activity-item competitions" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-card" onclick="showActivityModal('quiz-competition')">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=250&fit=crop" alt="Quiz Competition" class="card-image">
+                            <div class="card-overlay competitions">
+                                <div class="activity-icon">🧠</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="activity-title">Inter-School Quiz</h3>
+                            <p class="activity-subtitle">Battle of Knowledge</p>
+                            <p class="activity-description">Fast-paced quiz competition covering general knowledge, current affairs, and academic subjects with exciting prizes.</p>
+                            <div class="activity-meta">
+                                <div class="meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>3 Hours</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-people"></i>
+                                    <span>120+ Teams</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-question-circle"></i>
+                                    <span>8 Rounds</span>
+                                </div>
+                            </div>
+                            <div class="activity-tags">
+                                <span class="activity-tag">Knowledge</span>
+                                <span class="activity-tag">Quick Thinking</span>
+                                <span class="activity-tag">Teamwork</span>
+                            </div>
+                            <button class="btn btn-gradient w-100">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indoor Games -->
+                <div class="col-lg-4 col-md-6 activity-item sports" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-card" onclick="showActivityModal('indoor-games')">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1571741140006-bc4f8fec5b6b?w=400&h=250&fit=crop" alt="Indoor Games" class="card-image">
+                            <div class="card-overlay sports">
+                                <div class="activity-icon">🎯</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="activity-title">Indoor Games Tournament</h3>
+                            <p class="activity-subtitle">Strategic Mind Sports</p>
+                            <p class="activity-description">Chess, carrom, table tennis, and board games tournaments that develop strategic thinking and concentration skills.</p>
+                            <div class="activity-meta">
+                                <div class="meta-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>5 Days</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-people"></i>
+                                    <span>400+ Players</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="bi bi-controller"></i>
+                                    <span>12 Games</span>
+                                </div>
+                            </div>
+                            <div class="activity-tags">
+                                <span class="activity-tag">Strategy</span>
+                                <span class="activity-tag">Concentration</span>
+                                <span class="activity-tag">Skills</span>
+                            </div>
+                            <button class="btn btn-gradient w-100">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                        <div class="event-date">March 15, 2024</div>
+                        <h3 class="event-title">Science Fair 2024</h3>
+                        <p class="event-description">Annual showcase of student innovations and scientific projects. Students from grades 6-12 will present their research and experiments.</p>
+                        <div class="event-meta">
+                            <span><i class="bi bi-geo-alt"></i> Main Auditorium & Science Labs</span>
+                            <span><i class="bi bi-clock"></i> 9:00 AM - 4:00 PM</span>
+                            <span><i class="bi bi-people"></i> Open to Public</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="event-date">March 20-25, 2024</div>
+                        <h3 class="event-title">Inter-House Sports Week</h3>
+                        <p class="event-description">Week-long athletic competition between the four school houses featuring 20 different sports and events.</p>
+                        <div class="event-meta">
+                            <span><i class="bi bi-geo-alt"></i> School Sports Complex</span>
+                            <span><i class="bi bi-clock"></i> 8:00 AM - 5:00 PM Daily</span>
+                            <span><i class="bi bi-trophy"></i> Championship Trophy</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                        <div class="event-date">April 5-6, 2024</div>
+                        <h3 class="event-title">Cultural Festival</h3>
+                        <p class="event-description">Two-day celebration of arts, music, dance, and cultural heritage with over 50 performances and exhibitions.</p>
+                        <div class="event-meta">
+                            <span><i class="bi bi-geo-alt"></i> Main Campus</span>
+                            <span><i class="bi bi-clock"></i> 10:00 AM - 6:00 PM</span>
+                            <span><i class="bi bi-star"></i> Special Guest Performances</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="event-date">April 12, 2024</div>
+                        <h3 class="event-title">Parent-Teacher Conference</h3>
+                        <p class="event-description">Quarterly meeting for parents and teachers to discuss student progress and development plans.</p>
+                        <div class="event-meta">
+                            <span><i class="bi bi-geo-alt"></i> All Classrooms</span>
+                            <span><i class="bi bi-clock"></i> 8:00 AM - 5:00 PM</span>
+                            <span><i class="bi bi-calendar-check"></i> By Appointment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activity Detail Modal -->
+    <div class="modal fade" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h1 class="modal-title fs-4" id="activityModalLabel">Activity Details</h1>
+                        <p class="mb-0 opacity-75" id="modalSubtitle">Learn more about this exciting activity</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Modal content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src = "activity.js"></script>
+    </body>
+    </html>

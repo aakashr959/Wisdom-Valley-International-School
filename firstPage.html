@@ -3,106 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wisdom Vallley</title>
-  <link rel="stylesheet" href="firstPageStyle.css">
+  <title>Wisdom Valley Internatiional School</title>
+  <link rel = "stylesheet" href = "firstPageStyle.css">
 </head>
 <body>
+  <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnRrsLhMrHIpxtB0ABl2hJVRxHV_8n1r2nPw&s" alt="School Logo">
+                <span>Wisdom Valley</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Search..." id="searchInput">
+                <button class="search-btn" onclick="performSearch()">🔍</button>
+            </div>
+        </div>
+    </header>
 
-  <!-- Navigation Bar -->
-  <header>
-    <nav class = "top-nav ">
-      <div class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnRrsLhMrHIpxtB0ABl2hJVRxHV_8n1r2nPw&s" alt="School Logo"> Wisdom Valley</div>
-      <ul class="nav-links">
-        <li><a href="firstPage.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="admissions.html">Admission</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="fees.html">Pay Fees</a></li>
-        <li><a href="appointment.html">Take Appointment</a></li>
-      </ul>
-      <div class="navbar-search">
-        <input type="text" placeholder="Search...">
-        <button onclick="searchFunction()">🔍</button>
+    <!-- Announcements Ticker -->
+    <div class="announcements">
+        <div class="ticker">
+            📢 New Academic Session 2024-25 Admissions Open | 🏆 Our Students Won State Level Science Competition | 📚 Parent-Teacher Meeting on 15th March | 🎓 Annual Sports Day on 25th March
+        </div>
     </div>
-      
-    
-    </nav>
 
-    
-    <nav class="bottom-nav">
-      <div class="navbar-container">
-          <ul class="navbar-menu">
-              <li><a href="#">Student <span class="underline"></span></a></span></li>
-              <li><a href="#">Family <span class="underline"></span></a></li>
-              <li><a href="#">Faculty and Staff <span class="underline"></span></a></li>
-              <li><a href="#">Alumni <span class="underline"></span></a></li>
-              <li><a href="#">Visitors <span class="underline"></span></a></li>
-          </ul>
-          
-      </div>
-  </nav>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Wisdom Valley</h1>
+            <p>Nurturing Young Minds, Building Tomorrow's Leaders</p>
+            <div class="cta-buttons">
+                <a href="#admissions" class="btn btn-primary">Apply Now</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
 
-  </header>
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="quick-links-container">
+            <a href="#" class="quick-link">
+                <div class="quick-link-icon">📚</div>
+                <h3>Student Portal</h3>
+            </a>
+            <a href="#" class="quick-link">
+                <div class="quick-link-icon">👨‍👩‍👧‍👦</div>
+                <h3>Parent Portal</h3>
+            </a>
+            <a href="#" class="quick-link-icon">
+                <div class="quick-link-icon">💳</div>
+                <h3>Pay Fees</h3>
+            </a>
+            <a href="#" class="quick-link">
+                <div class="quick-link-icon">📅</div>
+                <h3>Calendar</h3>
+            </a>
+            <a href="#" class="quick-link">
+                <div class="quick-link-icon">📰</div>
+                <h3>News</h3>
+            </a>
+            <a href="#" class="quick-link">
+                <div class="quick-link-icon">📞</div>
+                <h3>Contact</h3>
+            </a>
+        </div>
+    </section>
 
-  <div class="messages">
-    <div class="card-container">
-      <!-- Principal's Message Card -->
-      <div class="card">
-        <img src="Principal_image.jpg"alt="Principal's Photo">
-          <h2>Principal's Message</h2>
-          <p id="principal-message">Welcome to our school! We strive for excellence in education and personal growth.</p>
-          <button onclick="showFullMessage('principal')">Read More</button>
-      </div>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-count="1200">0</div>
+                <div class="stat-label">Students</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="85">0</div>
+                <div class="stat-label">Teachers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="25">0</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="98">0</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Messages -->
+    <section class="leadership">
+        <h2 class="section-title">Leadership Messages</h2>
+        <div class="leadership-container">
+            <div class="leader-card">
+                <div class="leader-image">👨‍💼</div>
+                <h3 class="leader-name">Dr. Rajesh Kumar</h3>
+                <p class="leader-title">Principal</p>
+                <p class="leader-message" id="principal-message">Welcome to Wisdom Valley! We are committed to providing quality education that nurtures both academic excellence and character development.</p>
+                <button class="read-more-btn" onclick="showFullMessage('principal')">Read Full Message</button>
+            </div>
+            
+            <div class="leader-card">
+                <div class="leader-image">👩‍💼</div>
+                <h3 class="leader-name">Mrs. Priya Sharma</h3>
+                <p class="leader-title">Vice Principal</p>
+                <p class="leader-message" id="vice-principal-message">Our dedicated team ensures every student receives personalized attention and guidance to reach their full potential.</p>
+                <button class="read-more-btn" onclick="showFullMessage('vice-principal')">Read Full Message</button>
+            </div>
+            
+            <div class="leader-card">
+                <div class="leader-image">👨‍💻</div>
+                <h3 class="leader-name">Mr. Amit Patel</h3>
+                <p class="leader-title">Academic Director</p>
+                <p class="leader-message" id="director-message">We believe in holistic education that prepares students for the challenges of tomorrow while preserving our cultural values.</p>
+                <button class="read-more-btn" onclick="showFullMessage('director')">Read Full Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 class="section-title">Why Choose Wisdom Valley?</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3 class="feature-title">Academic Excellence</h3>
+                <p class="feature-description">Our rigorous curriculum and experienced faculty ensure students achieve their highest academic potential with consistent results.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏃‍♂️</div>
+                <h3 class="feature-title">Sports & Activities</h3>
+                <p class="feature-description">Comprehensive sports programs and extracurricular activities for overall personality development and physical fitness.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3 class="feature-title">Modern Facilities</h3>
+                <p class="feature-description">State-of-the-art classrooms, science labs, computer labs, and digital learning resources for enhanced education.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3 class="feature-title">Expert Faculty</h3>
+                <p class="feature-description">Highly qualified and experienced teachers committed to nurturing each student's unique talents and abilities.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3 class="feature-title">Character Building</h3>
+                <p class="feature-description">Focus on moral values, ethics, and character development alongside academic achievement for well-rounded individuals.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Creative Arts</h3>
+                <p class="feature-description">Music, dance, drama, and visual arts programs to explore and develop students' creative talents and interests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h2 class="section-title">Campus Life</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openGallery(0)">
+                <div class="gallery-overlay">
+                    <h3>Modern Classrooms</h3>
+                    <p>State-of-the-art learning environments</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery(1)">
+                <div class="gallery-overlay">
+                    <h3>Science Laboratory</h3>
+                    <p>Fully equipped labs for practical learning</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery(2)">
+                <div class="gallery-overlay">
+                    <h3>Sports Complex</h3>
+                    <p>World-class sports facilities</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery(3)">
+                <div class="gallery-overlay">
+                    <h3>Library</h3>
+                    <p>Extensive collection of books and digital resources</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery(4)">
+                <div class="gallery-overlay">
+                    <h3>Cultural Events</h3>
+                    <p>Celebrating diversity and creativity</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openGallery(5)">
+                <div class="gallery-overlay">
+                    <h3>Campus Gardens</h3>
+                    <p>Beautiful green spaces for learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Academic Programs</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Student Life</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Parent Portal</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">News & Events</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 123 Education Street, Delhi</li>
+                    <li>📞 +91 98765 43210</li>
+                    <li>✉️ info@wisdomvalley.edu.in</li>
+                    <li>🌐 www.wisdomvalley.edu.in</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wisdom Valley School. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script src = "firstPage.js"></script>
   
-      <!-- Manager's Message Card -->
-      <div class="card">
-        <img src="Manager_image.jpg" alt="Manager's Photo">
-          <h2>Manager's Message</h2>
-          <p id="manager-message">Our goal is to create a supportive environment where students thrive.</p>
-          <button onclick="showFullMessage('manager')">Read More</button>
-      </div>
-  </div>
-
-
-  </div>
-  
-  <!-- Gallery Section -->
-  <section id="gallery" class="content-section">
-    <h2>Our Campus</h2>
-    <div class="scroll-container">
-      <img src="Cmpus_independence day.jpg" alt="Campus_image">
-      <img src="school image.webp" alt="Campus_image2">
-      <img src="schoolcampus.jpg" alt="Campus_image3">
-      <img src="freshers_party.webp" alt="Freshers_party">
-      <img src="award.jpg" alt="award">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-    </div>
-  </section>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
-    <div class="hero-content">
-      <h1>Welcome to Our School</h1>
-      <p>Shaping bright futures, one student at a time.</p>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 School Name. All rights reserved.</p>
-  </footer>
-
-  <script src="firstPage.js"></script>
 </body>
 </html>
